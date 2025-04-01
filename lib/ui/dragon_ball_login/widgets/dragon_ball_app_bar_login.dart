@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DragonBallAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const DragonBallAppBar({super.key});
+class DragonBallAppBarLogin extends StatelessWidget {
+  const DragonBallAppBarLogin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,4 @@ class DragonBallAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(55);
 }

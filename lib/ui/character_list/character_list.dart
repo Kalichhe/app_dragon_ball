@@ -1,6 +1,6 @@
+import 'package:app_dragon_ball/data/service/character_service.dart';
 import 'package:app_dragon_ball/ui/dragon_ball_main/widgets/dragon_ball_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:app_dragon_ball/data/service/character_service.dart';
 import 'package:app_dragon_ball/domain/model/character.dart';
 import 'package:app_dragon_ball/ui/character_list/character_item/character_item.dart';
 
