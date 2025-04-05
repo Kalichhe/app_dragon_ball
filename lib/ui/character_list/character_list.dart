@@ -1,4 +1,5 @@
 import 'package:app_dragon_ball/data/service/character_service.dart';
+import 'package:app_dragon_ball/ui/dragon_ball_detail/dragon_ball_detail.dart';
 import 'package:app_dragon_ball/ui/dragon_ball_main/widgets/dragon_ball_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:app_dragon_ball/domain/model/character.dart';
@@ -38,8 +39,31 @@ class _CharacterListState extends State<CharacterList> {
           crossAxisCount: 2,
           childAspectRatio: 0.45,
           children: List.generate(_characterList.length, (index) {
+            final character = _characterList[index];
             return Column(
-              children: [CharacterItem(character: _characterList[index])],
+              children: [
+                CharacterItem(
+                  character: character,
+                  onDetailTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder:
+                            (context) => DragonBallDetail(
+                              character: character,
+                              image: character.image,
+                              name: character.name,
+                              ki: character.ki,
+                              maxKi: character.maxKi,
+                              race: character.race,
+                              gender: character.gender,
+                              affiliation: character.affiliation,
+                            ),
+                      ),
+                    );
+                  },
+                ),
+              ],
             );
           }),
         ),

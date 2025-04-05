@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CharacterImage extends StatelessWidget {
-  final String imageUrl;
+  final String image;
+  final VoidCallback onDetailTap;
 
-  const CharacterImage({super.key, required this.imageUrl});
+  const CharacterImage({
+    super.key,
+    required this.image,
+    required this.onDetailTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: onDetailTap,
       child: Padding(
         padding: const EdgeInsets.only(top: 16.0, left: 8.0, right: 8.0),
         child: Container(
@@ -17,7 +23,7 @@ class CharacterImage extends StatelessWidget {
           ),
           child: ClipRRect(
             child: Image.network(
-              imageUrl,
+              image,
               width: 200,
               height: 300,
               fit: BoxFit.fill,
