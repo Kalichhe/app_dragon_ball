@@ -10,7 +10,7 @@ class DragonBallAppBarDetail extends StatelessWidget
       height: 100,
       child: AppBar(
         title: const Text(
-          'Detalles',
+          'Details',
           style: TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.bold,

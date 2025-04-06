@@ -1,6 +1,6 @@
 import 'package:app_dragon_ball/data/service/character_service.dart';
+import 'package:app_dragon_ball/ui/character_list/character_item/widgets/character_app_bar.dart';
 import 'package:app_dragon_ball/ui/dragon_ball_detail/dragon_ball_detail.dart';
-import 'package:app_dragon_ball/ui/dragon_ball_main/widgets/dragon_ball_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:app_dragon_ball/domain/model/character.dart';
 import 'package:app_dragon_ball/ui/character_list/character_item/character_item.dart';
@@ -33,11 +33,11 @@ class _CharacterListState extends State<CharacterList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: DragonBallAppBar(),
+      appBar: CharacterAppBar(),
       body: SafeArea(
         child: GridView.count(
           crossAxisCount: 2,
-          childAspectRatio: 0.45,
+          childAspectRatio: 0.5,
           children: List.generate(_characterList.length, (index) {
             final character = _characterList[index];
             return Column(

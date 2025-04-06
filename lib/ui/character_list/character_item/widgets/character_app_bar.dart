@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DragonBallAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const DragonBallAppBar({super.key});
+class CharacterAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CharacterAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class DragonBallAppBar extends StatelessWidget implements PreferredSizeWidget {
       height: 100,
       child: AppBar(
         title: const Text(
-          'API Dragon Ball',
+          'Characters',
           style: TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.bold,

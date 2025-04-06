@@ -10,7 +10,7 @@ class DragonBallTextLogin extends StatelessWidget {
         children: [
           const SizedBox(height: 100),
           const Text(
-            'Bienvenido a la API Dragon Ball',
+            'Welcome to the Dragon Ball API',
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,

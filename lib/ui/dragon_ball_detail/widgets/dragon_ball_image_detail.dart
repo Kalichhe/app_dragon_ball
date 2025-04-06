@@ -7,8 +7,22 @@ class DragonBallImageDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      child: Image.network(image, width: 200, height: 400, fit: BoxFit.fill),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 50, top: 16),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.black, width: 2.0),
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+        child: ClipRRect(
+          child: Image.network(
+            image,
+            width: 200,
+            height: 400,
+            fit: BoxFit.fill,
+          ),
+        ),
+      ),
     );
   }
 }
