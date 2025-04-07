@@ -19,7 +19,6 @@ class DragonBallLogin extends StatelessWidget {
       appBar: const DragonBallAppBarDetail(),
       body: Center(
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             DragonBallTextLogin(),
             DragonBallLogoLogin(),
